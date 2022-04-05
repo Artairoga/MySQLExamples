@@ -22,6 +22,6 @@ public class Consultas {
     public static void SumarSueldo() throws SQLException{
         String consulta="UPDATE empleados SET salario=salario+1";
         Statement statement=Conexion.getBD().createStatement();
-        statement.executeUpdate(consulta);
+        System.out.println("Numero de registros mod: "+statement.executeUpdate(consulta));
     }
 }
